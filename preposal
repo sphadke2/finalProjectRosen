@@ -1,0 +1,13 @@
+####
+ideas for project:
+-Website track
+Something finance related, maybe a very basic options trading simulator.
+This would be done by taking a stock, doing a random walk for n days. Options at various strike prices are calculated by determining the value of the contract after n days. This would be run in a monte carlo simulation to get the average value of the contract.
+Then, a user would select a options contract, and then a single random walk model would be run to determine final value of the option.
+
+##
+Would do by myself
+
+##
+question:
+is this feasible: i.e I think it would be reasonable for me to have  some sort of web based file, I pull from the file to do the random walk model monte carlo stock simulation like we did in an in class exercise, then go one step further with option prices.
