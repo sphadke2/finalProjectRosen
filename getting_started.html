@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Getting Started
+{% endblock %}
+
+{% block main %}
+
+    <h1> Getting Started</h1>
+
+    <h2> What is a Call Option</h2>
+    <p>
+            A Call Option is a financial derivative that allows you to buy shares of stock at a given price at a predetermined time in the future.
+        To keep it simple, you make money when the stock goes up. The information you need to keep track of with call options is the strike price and the time of expiration.
+        All Call Options in this simulation expire in a year.
+    </p>
+
+    <p>
+        The strike price is crucial to determine how much money you make or lose. For example lets say stock X is trading at $100, and you buy a 125 strike call.
+        That means you will only make money when the stock price reaches at least 125 dollars. However, call options cost money initially. Let's say the call you bought was worth
+        $5.00. If the closing stock price is 126, the call option is worth (126-125) = $1.00. You paid $5.00 for it, so you lost $4.00.
+        Therefore to be profitable, the stock needs to reach at least $130 for you to make money.
+    </p>
+
+    <h2> Choosing a Call option</h2>
+    <p>
+        Call options can be in the money (Strike less than stock price), at the money (strike equal to stock price), or out of the money (strike greater than stock price).
+        The riskiness of these options from least to most risky is In the money, then At the money, then out of the money. Increased risk though means increased potential reward.
+        If you get really really lucky, a well purchased out of the money call option could net you 10 times your original investment or more.
+    </p>
+    <h2> Pricing Call Options</h2>
+    <p>
+        To put it simply, these options are priced by simulating future stock prices with a random walk model, then determining the average value of
+        each contract across the different future stock prices.
+    </p>
+    <p>
+        In general, more volatile stocks mean more expensive option costs, but more volatility also means more potential profit
+    </p>
+   <h2>
+       Stocks Selected
+   </h2>
+   <p>
+       Four stocks have been made available for the simulator. They are Apple (AAPL), Cadence Design Systems (CDNS), Dollar Tree (DLTR), and JNUG.
+       JNUG is a leveraged ETF that tracks a gold miner index, so it is incredibly volatile
+   </p>
+   <p>
+       All four stocks trade for ~$115.00 right now. That means if you choose a strike below $100 that is an in the money call, strikes 100 and 125 are at the money,
+       and strikes greater than $150 are out of the money and are incredibly risky.
+   </p>
+
+   <h2>
+       Using the simulator
+   </h2>
+   <p>
+       First you need to go to the quote page, get a price for the option you want to buy. Then buy it. Then sell it.
+       The sell price is determined by randomly generating a future stock price based on a random walk model.
+
+   </p>
+   <p>
+       It is likely you will lose all your money if you buy really out of the money contracts. So do that because its fun if you actually make money.
+   </p>
+   <h2>
+       History Tab
+   </h2>
+   <p>
+       The history tab is useful to show how much money you made/lost (mostly lost) by showing the cash flow for your trades.
+       Note that negative numbers are what you bought (money leaving your pocket), and that positive numbers are from when you sold (money hopefully entering
+        your pocket)
+   </p>
+
+
+
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+   <p>
+       A Call Option on the stock {{symbol}} for strike {{strike}} costs {{optionPrice}}.
+   </p>
+{% endblock %}
